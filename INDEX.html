@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Form - BAG BONANZA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h1>BAG BONANZA</h1>
+    <img src="11111.jpg" alt="Logo" class="logo">
+    <form id="orderForm">
+        <input type="text" id="customerName" name="customerName" placeholder="Customer Name" required>
+        <input type="tel" id="phone1" name="phone1" placeholder="Phone Number" required>
+        <input type="tel" id="phone2" name="phone2" placeholder="Alternate Phone Number">
+        
+        <select id="province" name="province" required onchange="updateCities()">
+            <option value="">Select Province</option>
+            <!-- Provinces will be populated here -->
+        </select>
+        
+        <select id="city" name="city" required onchange="updateAreas()">
+            <option value="">Select City</option>
+            <!-- Cities will be populated here -->
+        </select>
+        
+        <input type="text" id="sectorBlockArea" name="sectorBlockArea" placeholder="Sector / Block / Area" required>
+        <textarea id="fullAddress" name="fullAddress" placeholder="Full Address" required></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
